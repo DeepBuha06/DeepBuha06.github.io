@@ -1,4 +1,4 @@
----
+<!-- ---
 title: "Why Attention is Not Explanation"
 date: "2026-05-09"
 ---
@@ -40,4 +40,4 @@ Attention is a *mechanism*, not an *explanation*. Building systems that treat it
 
 - Jain, S., & Wallace, B. C. (2019). *Attention is not Explanation.* NAACL.
 - Wiegreffe, S., & Pinter, Y. (2019). *Attention is not not Explanation.* EMNLP.
-- Zhang, Z., et al. (2023). *H2O: Heavy-Hitter Oracle for Efficient Generative Inference.* NeurIPS.
+- Zhang, Z., et al. (2023). *H2O: Heavy-Hitter Oracle for Efficient Generative Inference.* NeurIPS. -->
