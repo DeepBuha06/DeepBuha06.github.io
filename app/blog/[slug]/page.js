@@ -2,6 +2,8 @@ import Link from "next/link";
 import { MDXRemote } from "next-mdx-remote/rsc";
 import { getAllBlogs, getBlogBySlug } from "@/lib/content";
 
+export const dynamicParams = false;
+
 export function generateStaticParams() {
   return getAllBlogs().map((b) => ({ slug: b.slug }));
 }

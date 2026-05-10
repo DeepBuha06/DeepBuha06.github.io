@@ -2,6 +2,8 @@ import Link from "next/link";
 import { MDXRemote } from "next-mdx-remote/rsc";
 import { getAllProjects, getProjectBySlug } from "@/lib/content";
 
+export const dynamicParams = false;
+
 export function generateStaticParams() {
   return getAllProjects().map((p) => ({ slug: p.slug }));
 }
