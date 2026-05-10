@@ -1,0 +1,116 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 16px;
+}
+
+body {
+  background-color: #F5F1EC;
+  color: #48484A;
+}
+
+::selection {
+  background: rgba(155, 123, 91, 0.2);
+}
+
+::-webkit-scrollbar { width: 5px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: rgba(0,0,0,0.08); border-radius: 99px; }
+
+/* Spotlight glow that follows cursor */
+.spotlight {
+  pointer-events: none;
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  transition: background 0.3s;
+}
+
+/* Active nav indicator */
+.nav-link {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #8E8E93;
+  transition: all 0.3s ease;
+}
+.nav-link::before {
+  content: '';
+  display: block;
+  width: 24px;
+  height: 1px;
+  background: #C7C7CC;
+  transition: all 0.3s ease;
+}
+.nav-link:hover, .nav-link.active {
+  color: #1D1D1F;
+}
+.nav-link:hover::before, .nav-link.active::before {
+  width: 56px;
+  background: #1D1D1F;
+}
+
+/* Tech tag pill */
+.tech-tag {
+  display: inline-block;
+  padding: 4px 12px;
+  font-size: 12px;
+  font-weight: 500;
+  color: #9B7B5B;
+  background: rgba(155, 123, 91, 0.08);
+  border-radius: 999px;
+  line-height: 1.5;
+}
+
+/* Experience card hover */
+.exp-card {
+  padding: 20px 24px;
+  border-radius: 12px;
+  border: 1px solid transparent;
+  transition: all 0.3s ease;
+}
+.exp-card:hover {
+  background: rgba(155, 123, 91, 0.04);
+  border-color: rgba(155, 123, 91, 0.08);
+  box-shadow: 0 4px 20px rgba(0,0,0,0.04);
+}
+
+/* Blog prose */
+.prose-custom {
+  --tw-prose-body: #48484A;
+  --tw-prose-headings: #1D1D1F;
+  --tw-prose-links: #9B7B5B;
+  --tw-prose-bold: #1D1D1F;
+  --tw-prose-quotes: #48484A;
+  --tw-prose-quote-borders: #C9B99A;
+  --tw-prose-code: #6b5d4a;
+  --tw-prose-counters: #9B7B5B;
+  --tw-prose-bullets: #C9B99A;
+}
+.prose-custom a {
+  text-decoration-color: rgba(155, 123, 91, 0.3);
+  text-underline-offset: 3px;
+  transition: text-decoration-color 0.2s;
+}
+.prose-custom a:hover { text-decoration-color: #9B7B5B; }
+.prose-custom code {
+  font-size: 0.9em;
+  background: rgba(0,0,0,0.04);
+  padding: 2px 6px;
+  border-radius: 4px;
+}
+.prose-custom code::before, .prose-custom code::after { content: none; }
+.prose-custom pre {
+  background: #1e1e1e;
+  color: #e5e5e5;
+  border-radius: 12px;
+}
+.prose-custom pre code { background: transparent; padding: 0; color: inherit; }
