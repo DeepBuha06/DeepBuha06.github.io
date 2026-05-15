@@ -18,6 +18,9 @@ export const metadata = {
   title: "Deep Buha — Systems Engineer",
   description:
     "Personal portfolio of Deep Buha. Systems Engineer at IIT Gandhinagar.",
+  verification: {
+    google: "AiUgbGnV-jdnmg162v4HtmO5ymKnTisc6xjt3Tc2z0w",
+  },
 };
 
 export default function RootLayout({ children }) {
